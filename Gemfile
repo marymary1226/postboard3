@@ -45,7 +45,13 @@ end
 
 group :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'sqlite3'
+  group :development do
+    gem 'sqlite3'
+  end
+  group :production do
+    gem 'pg'
+  end
+  
   gem 'byebug'
 end
 
